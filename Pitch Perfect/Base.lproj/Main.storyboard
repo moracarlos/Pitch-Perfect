@@ -26,17 +26,39 @@
                                     <action selector="playSound:" destination="W81-m0-rci" eventType="touchUpInside" id="zIn-7A-vcg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hh9-o6-OLs">
+                                <rect key="frame" x="394" y="114" width="100" height="100"/>
+                                <state key="normal" image="fast">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playFastSound:" destination="W81-m0-rci" eventType="touchUpInside" id="hBh-qY-xuK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0E-tz-dAO">
+                                <rect key="frame" x="275" y="457" width="50" height="50"/>
+                                <state key="normal" image="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAllSounds:" destination="W81-m0-rci" eventType="touchUpInside" id="Itq-RG-8fH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mMn-TB-uqB" firstAttribute="leading" secondItem="Fer-dl-ACH" secondAttribute="leadingMargin" constant="57" id="3II-df-rlW"/>
+                            <constraint firstItem="Hh9-o6-OLs" firstAttribute="top" secondItem="Zoa-NF-Xyg" secondAttribute="bottom" constant="50" id="8BH-KG-KCJ"/>
+                            <constraint firstAttribute="centerX" secondItem="x0E-tz-dAO" secondAttribute="centerX" id="MZh-Lg-2Mm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hh9-o6-OLs" secondAttribute="trailing" constant="90" id="O8W-W8-xSR"/>
                             <constraint firstItem="mMn-TB-uqB" firstAttribute="top" secondItem="Zoa-NF-Xyg" secondAttribute="bottom" constant="50" id="RSf-dU-jnh"/>
+                            <constraint firstItem="jRd-ID-B9g" firstAttribute="top" secondItem="x0E-tz-dAO" secondAttribute="bottom" constant="93" id="v5n-Cc-NR4"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nH-LC-idd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1944" y="309"/>
+            <point key="canvasLocation" x="1948" y="271"/>
         </scene>
         <!--Record-->
         <scene sceneID="tne-QT-ifu">
@@ -115,6 +137,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>

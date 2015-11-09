@@ -18,6 +18,8 @@ class PlaySoundsViewController: UIViewController {
             audioPlayer = AVAudioPlayer()
             var filePath = NSURL.fileURLWithPath(path)
             audioPlayer = AVAudioPlayer(contentsOfURL: filePath, error: nil)
+            audioPlayer.enableRate = true
+
         }else{
             println("Error obtaining the resource")
         }
@@ -32,9 +34,22 @@ class PlaySoundsViewController: UIViewController {
 
     
     @IBAction func playSound(sender: UIButton) {
-            //Play audio slooooooowly here :)
-            audioPlayer.play()
-            println("click")
+        //Play audio slooooooowly here :)
+        audioPlayer.stop()
+        audioPlayer.currentTime = 0.0
+        audioPlayer.rate = 0.5
+        audioPlayer.play()
+    }
+    
+    @IBAction func playFastSound(sender: UIButton) {
+        audioPlayer.stop()
+        audioPlayer.currentTime = 0.0
+        audioPlayer.rate = 2.0
+        audioPlayer.play()
+    }
+    
+    @IBAction func stopAllSounds(sender: UIButton) {
+        audioPlayer.stop()
     }
     /*
     // MARK: - Navigation
